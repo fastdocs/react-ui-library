@@ -1,0 +1,61 @@
+input[type="radio"] {
+	position: relative;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	cursor: pointer;
+	appearance: none;
+
+	&::before {
+		position: absolute;
+		display: block;
+		content: ".scss";
+		background: var(--anthracite-100);
+		border: 1px solid var(--anthracite-300);
+		border-radius: 100rem;
+		height: 2rem;
+		width: 2rem;
+		box-shadow: 0 0 0 0.25rem transparent;
+		outline: none;
+		transform: translate3d(-2px, -1px, 0);
+		transition: all ease 250ms;
+	}
+
+	&::after {
+		position: absolute;
+		display: block;
+		content: ".scss";
+		background: var(--blue-400);
+		border: 1px solid var(--blue-400);
+		border-radius: 100rem;
+		height: 1.5rem;
+		width: 1.5rem;
+		left: 0px;
+		top: 1px;
+		transform: scale(0);
+		transform-origin: center center;
+		transition: all ease 250ms;
+	}
+
+	&:hover {
+		&:before {
+			box-shadow: 0 0 0 0.25rem var(--anthracite-200);
+			border-color: var(--anthracite-400);
+		}
+	}
+
+	&:focus {
+		outline: none;
+
+		&:before {
+			box-shadow: 0 0 0 0.25rem var(--blue-100);
+			border-color: var(--blue-400);
+		}
+	}
+
+	&:checked {
+		&:after {
+			transform: scale(0.6);
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@import "../../core-styles/index.scss";
+
+button.Button {
+	display: inline-block;
+	border-radius: 0.5rem;
+	padding: 0.9rem 2rem;
+	border: 0.125rem solid transparent;
+	transition: all ease 250ms;
+	cursor: pointer;
+	outline: none;
+	font-size: inherit;
+	font-family: inherit;
+	text-decoration: none;
+
+	&.primary {
+		background-color: var(--blue-400);
+		color: var(--white);
+
+		&:hover {
+			background-color: var(--blue-600);
+			color: var(--white);
+		}
+	}
+
+	&.secondary {
+		color: var(--anthracite-700);
+		background: var(--anthracite-100);
+
+		&:hover {
+			color: var(--anthracite-700);
+			background: var(--anthracite-200);
+		}
+
+		&:active {
+			background: var(--anthracite-300);
+		}
+	}
+
+	&.tertiary {
+		border: 1px solid var(--blue-400);
+		color: var(--blue-400);
+		background: var(--white);
+
+		&:hover {
+			color: var(--white);
+			background-color: var(--blue-400);
+		}
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}
