@@ -1,24 +1,28 @@
 import React from 'react'
-import Button from './Button'
+import { Button as ButtonComponent } from './Button'
 
 export default {
-  title: 'Button',
-  component: Button,
+  component: ButtonComponent,
+  title: 'Library/Button',
   argTypes: {
     label: {
       control: { type: 'text' },
     },
-    type: {
+    style: {
       options: ['primary', 'secondary', 'tertiary'],
-      control: { type: 'select' },
+      control: { type: 'radio' },
     },
     size: {
       options: ['default', 'small', 'large'],
-      control: { type: 'select' },
+      control: { type: 'radio' },
     },
     width: {
       options: ['default', 'full-width'],
-      control: { type: 'select' },
+      control: { type: 'radio' },
+    },
+    type: {
+      options: ['button', 'submit', 'reset'],
+      control: { type: 'radio' },
     },
     disabled: {
       options: [true, false],
@@ -28,18 +32,19 @@ export default {
   },
 }
 
-export const Default = (args) => {
+export const Button = (args) => {
   return (
-    <Button appearance={{ ...args }} {...args}>
+    <ButtonComponent appearance={{ ...args }} {...args}>
       Hello
-    </Button>
+    </ButtonComponent>
   )
 }
 
-Default.args = {
+Button.args = {
   label: 'Click me',
-  type: 'primary',
+  style: 'primary',
   size: 'default',
   width: 'default',
   disabled: false,
+  type: 'button',
 }

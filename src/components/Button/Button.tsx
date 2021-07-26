@@ -4,22 +4,22 @@ import { ButtonProps } from './Button.types'
 
 import './Button.scss'
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   children,
   label,
-  appearance: { type = 'primary', size = 'default', width = 'default' },
+  appearance: { style = 'primary', size = 'default', width = 'default' },
   onClick,
   disabled,
-}) => {
+  type = 'button',
+}): React.ReactElement => {
   return (
     <button
-      className={`Button ${type} ${size} ${width}`}
+      className={`Button ${style} ${size} ${width}`}
       onClick={onClick}
       disabled={disabled}
+      type={type}
     >
       {label ? label : children}
     </button>
   )
 }
-
-export default Button
