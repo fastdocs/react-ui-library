@@ -5,7 +5,7 @@ export interface ButtonProps {
   appearance?: {
     type: 'primary' | 'secondary' | 'tertiary'
     size: 'default' | 'small' | 'large'
-    width: 'default' | 'full'
+    width: 'default' | 'full-width'
   }
   disabled?: boolean
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void

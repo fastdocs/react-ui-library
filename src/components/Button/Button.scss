@@ -55,7 +55,11 @@
   }
 
   &.large {
-    padding: 2rem 2.5rem;
+    padding: 1.25rem 2.5rem;
+  }
+
+  &.full-width {
+    width: 100%;
   }
 
   &:disabled {
