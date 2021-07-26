@@ -1,7 +1,5 @@
 import React from "react";
-
-// Generated with util/create-component.js
 export interface ButtonProps {
-	children: React.ReactChild;
+	children: React.ReactNode;
 	appearence: "primary" | "secondary" | "tertiary";
 }

@@ -1,4 +1,3 @@
-// Generated with util/create-component.js
 import React from "react";
 import { render } from "@testing-library/react";
 
@@ -10,18 +9,19 @@ describe("Test Component", () => {
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      children: "Test Button",
+      appearence: "primary",
     };
   });
 
   const renderComponent = () => render(<Button {...props} />);
 
   it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
+    props.children = "Hello World";
+    const { baseElement } = renderComponent();
 
-    const component = getByTestId("Button");
+    const component = baseElement;
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveTextContent("Hello World");
   });
 });
