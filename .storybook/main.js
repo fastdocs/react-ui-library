@@ -7,6 +7,7 @@ module.exports = {
     '@storybook/addon-controls',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',
+    '@storybook/addon-viewport',
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
