@@ -1,0 +1,19 @@
+@import '../../../core-styles/index.scss';
+@import './partials/base.scss';
+@import './partials/variants.scss';
+@import './partials/utilities.scss';
+
+.Button {
+  //base
+  @include base;
+
+  //variants
+  @include primary;
+  @include secondary;
+  @include tertiary;
+
+  //utilities
+  @include small;
+  @include large;
+  @include full-width;
+}

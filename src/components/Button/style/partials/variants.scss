@@ -1,17 +1,4 @@
-@import '../../core-styles/index.scss';
-
-.Button {
-  display: inline-block;
-  border-radius: 0.5rem;
-  padding: 0.9rem 2rem;
-  border: 0.125rem solid transparent;
-  transition: all ease 250ms;
-  cursor: pointer;
-  outline: none;
-  font-size: inherit;
-  font-family: inherit;
-  text-decoration: none;
-
+@mixin primary {
   &.primary {
     background-color: var(--blue-400);
     color: var(--white);
@@ -23,8 +10,16 @@
     &:active {
       background-color: var(--blue-600);
     }
-  }
 
+    &:disabled {
+      opacity: 0.3;
+      background-color: var(--blue-400);
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin secondary {
   &.secondary {
     color: var(--anthracite-700);
     background: var(--anthracite-100);
@@ -37,8 +32,16 @@
     &:active {
       background: var(--anthracite-300);
     }
-  }
 
+    &:disabled {
+      color: var(--anthracite-400);
+      background: var(--anthracite-100);
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin tertiary {
   &.tertiary {
     border: 1px solid var(--blue-400);
     color: var(--blue-400);
@@ -48,22 +51,16 @@
       color: var(--white);
       background-color: var(--blue-400);
     }
-  }
 
-  &.small {
-    padding: 0.5rem 1.5rem;
-  }
+    &:active {
+      background-color: var(--blue-600);
+    }
 
-  &.large {
-    padding: 1.25rem 2.5rem;
-  }
-
-  &.full-width {
-    width: 100%;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    &:disabled {
+      opacity: 0.3;
+      color: var(--blue-400);
+      background: var(--white);
+      cursor: not-allowed;
+    }
   }
 }
