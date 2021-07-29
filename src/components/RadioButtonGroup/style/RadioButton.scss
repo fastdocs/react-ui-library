@@ -1,10 +1,18 @@
-input[type='radio'] {
+label {
+  font-size: initial;
+  font-weight: initial;
+  text-transform: initial;
+  cursor: pointer;
+}
+
+input[type='radio'].radio-button {
   position: relative;
   display: block;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
   appearance: none;
+  margin-right: 1rem;
 
   &::before {
     position: absolute;

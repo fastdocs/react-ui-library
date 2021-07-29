@@ -1,0 +1,11 @@
+@import '../../../core-styles/index.scss';
+
+.radio-button-group {
+  display: grid;
+  gap: 1rem;
+
+  &.horizontal {
+    display: flex;
+    gap: 2rem;
+  }
+}
