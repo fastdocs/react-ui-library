@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   RadioButtonProps,
@@ -18,18 +18,19 @@ export const RadioButton: React.FC<RadioButtonProps> = ({
   defaultChecked,
 }): React.ReactElement => {
   return (
-    <label>
-      <input
-        className="radio-button"
-        type="radio"
-        name={name}
-        defaultValue={defaultValue}
-        defaultChecked={defaultChecked}
-        disabled={disabled}
-        onClick={onClick}
-      />
-      {children ? children : label}
-    </label>
+    <div className="radio-button">
+      <label>
+        <input
+          type="radio"
+          name={name}
+          defaultValue={defaultValue}
+          defaultChecked={defaultChecked}
+          disabled={disabled}
+          onClick={onClick}
+        />
+        {children ? children : label}
+      </label>
+    </div>
   )
 }
 
