@@ -13,4 +13,10 @@ export interface RadioButtonProps {
 export interface RadioButtonGroupProps {
   children: React.ReactNode
   orientation?: 'horizontal' | 'vertical'
+  showDescription?: boolean
+}
+
+export interface RadioButtonLabelProps {
+  children: React.ReactNode
+  description?: string
 }

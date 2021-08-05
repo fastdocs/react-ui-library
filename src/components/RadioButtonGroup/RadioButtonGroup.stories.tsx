@@ -2,6 +2,7 @@ import React from 'react'
 import {
   RadioButtonGroup as RadioButtonGroupComponent,
   RadioButton,
+  RadioButtonLabel,
 } from './RadioButtonGroup'
 
 export default {
@@ -20,13 +21,13 @@ export const RadioButtonGroup = (args) => {
   return (
     <RadioButtonGroupComponent {...args}>
       <RadioButton defaultChecked={true} defaultValue="Porsche" name="Foo">
-        Porsche
+        <RadioButtonLabel description="Porsche 911">Porsche</RadioButtonLabel>
       </RadioButton>
       <RadioButton defaultChecked={false} defaultValue="BMW" name="Foo">
-        BMW
+        <RadioButtonLabel description="BMW M450i">BMW</RadioButtonLabel>
       </RadioButton>
       <RadioButton defaultChecked={false} defaultValue="Audi" name="Foo">
-        Audi
+        <RadioButtonLabel description="Audi RS6">Audi</RadioButtonLabel>
       </RadioButton>
     </RadioButtonGroupComponent>
   )
@@ -34,4 +35,5 @@ export const RadioButtonGroup = (args) => {
 
 RadioButtonGroup.args = {
   orientation: 'vertical',
+  showDescription: false,
 }

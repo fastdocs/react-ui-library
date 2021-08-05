@@ -6,6 +6,21 @@
     cursor: pointer;
   }
 
+  .radio-button-input {
+    display: flex;
+    align-items: center;
+  }
+
+  .radio-button-description {
+    display: flex;
+    flex-direction: column;
+
+    span:not(:first-child) {
+      font-size: 1.75rem;
+      color: var(--anthracite-600);
+    }
+  }
+
   input[type='radio'] {
     position: relative;
     display: block;
@@ -14,6 +29,7 @@
     cursor: pointer;
     appearance: none;
     margin-right: 1rem;
+    margin-top: 0;
 
     &::before {
       position: absolute;

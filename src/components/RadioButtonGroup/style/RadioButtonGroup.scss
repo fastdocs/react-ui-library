@@ -8,4 +8,26 @@
     display: flex;
     gap: 2rem;
   }
+
+  &.hide-description {
+    .radio-button-description {
+      span:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+  &.show-description {
+    gap: 0;
+    border: 0.125rem solid var(--anthracite-300);
+    border-radius: 0.5rem;
+
+    .radio-button {
+      &:not(:last-child) {
+        border-bottom: 0.125rem solid var(--anthracite-300);
+      }
+      padding: 1rem 1rem 1rem 0;
+      margin-left: 1rem;
+    }
+  }
 }
